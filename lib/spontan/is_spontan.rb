@@ -13,7 +13,7 @@ module Spontan
 
         begin
           effects_file = "effects/#{name.underscore}_effects.rb"
-          require effects_file
+          load effects_file
           include Spontan::IsSpontan::LocalInstanceMethods
         rescue LoadError
           logger.warn "Could not find effects file. Expected it to be at #{effects_file}"
