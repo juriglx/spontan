@@ -12,7 +12,7 @@ module Spontan
         self.rules = []
 
         begin
-          effects_file = "effects/#{name.underscore}_effects.rb"
+          effects_file = "effects/#{name.underscore}.effects"
           load effects_file
           include Spontan::IsSpontan::LocalInstanceMethods
         rescue LoadError
